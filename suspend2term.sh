@@ -1,6 +1,9 @@
 # Linux bash script for cPanel/WHM server
 # Terminate cpanel accounts that are suspended for more then X days
-# To run this script automatically without prompts, comment out lines 15,16,17,19 (add # at the begnning of the line)
+# To run this script automatically without prompts, comment out lines 18,19,20,22 (add # at the beginning of the line)
+# Before running this script make sure you have working backups of the cpanels
+
+# Number of days after which suspended cpanels are terminated
 suspend2terminatedays=60
 
 for cpanel in $(ls -A1 /var/cpanel/users|grep -v "system");do
